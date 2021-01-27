@@ -1,0 +1,850 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 1rem 5rem;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    z-index: 99;
+}
+
+nav .logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+nav .nav-links {
+    flex: 1;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav-links li a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 2px #fff;
+    font-weight: 600;
+}
+
+nav .nav-links li a:hover {
+    border-bottom: 2px solid rgb(196, 37, 37);
+}
+
+.hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 991px) {
+
+    nav .nav-links.active {
+        animation: navbarToDown 300ms ease forwards;
+    }
+
+    @keyframes navbarToDown {
+        0% {
+            margin-top: -40vh;
+        }
+
+        100% {
+            margin: 0;
+        }
+    }
+
+    nav .nav-links.not-active {
+        animation: navbarToTop 300ms ease forwards;
+    }
+
+    @keyframes navbarToTop {
+        0% {
+            margin-top: 0;
+        }
+
+        100% {
+            margin: -40vh;
+        }
+    }
+
+    nav {
+        padding: 1rem 1rem;
+        height: 9vh;
+    }
+    
+    nav .logo {
+        flex: 1;
+    }
+
+    nav .logo h2 {
+        font-size: 1rem;
+    }
+    
+    nav .nav-links {
+        position: absolute;
+        background-color: #fff;
+        flex-direction: column;
+        width: 100%;
+        left: 0;
+        top: 0;
+        padding: 1rem 0;
+        height: 40vh;
+
+        margin-top: -40vh;
+    }
+
+    nav .nav-links li {
+        display: flex;
+        width: 100%;
+    }
+    
+    nav .nav-links li a {
+        width: 100%;
+        height: 100%;
+        border-bottom: 2px solid #fff;
+        text-align: center;
+    }
+    
+    nav .nav-links li a:hover {
+        border-bottom: 2px solid #fff;
+    }
+
+    .hamburger {
+        position: absolute;
+        width: 30px;
+        right: 16px;
+        cursor: pointer;
+        display: inline;
+    }
+
+    .hamburger div {
+        width: 100%;
+        height: 3px;
+        margin: 5px 0;
+        z-index: 99999;
+        background: #000;
+    }
+}
+
+/* Hero Wrapper */
+.hero-wrapper {
+    display: flex;
+    height: 90vh;
+    background-color: #FF7C9F;
+    margin-top: 10vh;
+}
+
+.hero-wrapper .teks-nikah {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-wrapper .teks-nikah .inner {
+    padding-left: 3rem;
+    color: #fff;
+}
+
+.hero-wrapper .teks-nikah .inner h2 {
+    font-size: 60px;
+}
+
+.hero-wrapper .teks-nikah .inner p {
+    font-size: 17px;
+    margin-top: 12px;
+}
+
+.hero-wrapper .vector-nikah-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-wrapper .vector-nikah-wrapper img {
+    width: 90%;
+}
+
+.hero-wrapper .teks-nikah .inner .jam-mundur-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1.3rem;
+}
+
+.hero-wrapper .teks-nikah .inner .jam-mundur-wrapper .waktu span.number {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 991px) {
+    .hero-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+        padding: 1rem 0 2rem;
+        margin-top: 9vh;
+    }
+    
+    .hero-wrapper .vector-nikah-wrapper img {
+        width: 75%;
+    }
+    
+    .hero-wrapper .teks-nikah .inner {
+        padding-left: 0rem;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .hero-wrapper .teks-nikah .inner h2 {
+        font-size: 25px;
+    }
+
+    .hero-wrapper .teks-nikah .inner p {
+        font-size: 14px;
+        margin-top: 14px;
+    }
+
+    .hero-wrapper .teks-nikah .inner .jam-mundur-wrapper {
+        margin-top: 1.3rem;
+    }
+    
+    .hero-wrapper .teks-nikah .inner .jam-mundur-wrapper .waktu span.number {
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    .hero-wrapper .teks-nikah .inner .jam-mundur-wrapper .waktu span.text {
+        font-size: 14px;
+    }
+}
+
+
+/* Mempelai Wrapper */
+.mempelai-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 5rem;
+}
+
+.mempelai-wrapper img.img-tulisan-bismillah {
+    width: 15rem;
+    margin: 0 auto;
+}
+
+.mempelai-wrapper p.text-bismillah {
+    text-align: center;
+    margin-top: 1.2rem;
+    font-size: 33px;
+}
+
+.mempelai-wrapper p.wish-indonesia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: .6rem;
+    font-size: 17px;
+    color: #444;
+}
+
+.mempelai-wrapper .nama-mempelai-wrapper {
+    margin-top: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mempelai-wrapper .nama-mempelai-wrapper .dengan-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    font-weight: 700;
+    width: 7%;
+    text-align: center;
+}
+
+.mempelai-wrapper .nama-mempelai-wrapper .nama-mempelai {
+    width: 46%;
+    text-align: center;
+    align-self: flex-start;
+}
+
+.mempelai-wrapper .nama-mempelai-wrapper .nama-mempelai img.photo-mempelai {
+    width: 36%;
+    border-radius: 100%;
+}
+
+.mempelai-wrapper .nama-mempelai-wrapper .nama-mempelai .nama {
+    font-family: 'Dancing Script', cursive;
+    font-size: 55px;
+    margin-top: 1.25rem;
+    margin-bottom: 1.2rem;
+    color: #222;
+}
+
+.mempelai-wrapper .nama-mempelai-wrapper .nama-mempelai p.desc {
+    color: #333;
+    display: flex;
+    flex-direction: column
+}
+
+.mempelai-wrapper .nama-mempelai-wrapper .nama-mempelai p.desc span {
+    margin-bottom: .2rem;
+}
+
+@media screen and (max-width: 991px) {
+    .mempelai-wrapper {
+        padding: 2rem 1rem;
+    }
+    
+    .mempelai-wrapper img.img-tulisan-bismillah {
+        width: 45%;
+    }
+    
+    .mempelai-wrapper p.text-bismillah {
+        text-align: center;
+        margin-top: .8rem;
+        font-size: 18px;
+    }
+    
+    .mempelai-wrapper p.wish-indonesia {
+        margin-top: .6rem;
+        font-size: 15px;
+        text-align: center;
+    }
+    
+    .mempelai-wrapper .nama-mempelai-wrapper {
+        margin-top: 3rem;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .mempelai-wrapper .nama-mempelai-wrapper .dengan-text {
+        font-size: 25px;
+        margin: 2rem 0;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .mempelai-wrapper .nama-mempelai-wrapper .nama-mempelai {
+        width: 100%;
+    }
+    
+    .mempelai-wrapper .nama-mempelai-wrapper .nama-mempelai img.photo-mempelai {
+        width: 40%;
+    }
+    
+    .mempelai-wrapper .nama-mempelai-wrapper .nama-mempelai .nama {
+        font-size: 30px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .mempelai-wrapper .nama-mempelai-wrapper .nama-mempelai p.desc {
+        font-size: 14px;
+    }
+}
+
+.headline {
+    text-align: center;
+    margin-top: 4rem;
+    position: relative;
+}
+
+.headline img.headline-heart {
+    width: 75%;
+}
+
+.headline .context-wrapper {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.headline .context-wrapper h3 {
+    font-size: 45px;
+    font-family: 'Sofia', cursive;
+    font-weight: 100;
+}
+
+.headline .context-wrapper img.headline-simple {
+    width: 25%;
+    margin-top: .25rem;
+}
+
+p.text-after-headline {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+    margin-top: 1.5rem;
+    line-height: 30px;
+    padding: 0 5rem;
+}
+
+@media screen and (max-width: 991px) {
+    .headline {
+        margin-top: 3rem;
+    }
+    
+    .headline img.headline-heart {
+        width: 80%;
+    }
+    
+    .headline .context-wrapper h3 {
+        font-size: 30px;
+    }
+    
+    .headline .context-wrapper img.headline-simple {
+        width: 50%;
+        margin-top: .2rem;
+    }
+    
+    p.text-after-headline {
+        font-size: 14px;
+        margin-top: 1rem;
+        line-height: 25px;
+        padding: 0 1rem;
+    }
+}
+
+.mempelai-wrapper .akad-nikah-hari-tanggal-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.mempelai-wrapper .akad-nikah-hari-tanggal-wrapper .akad-nikah {
+    width: 48%;
+}
+
+.mempelai-wrapper .akad-nikah-hari-tanggal-wrapper .akad-nikah .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mempelai-wrapper .akad-nikah-hari-tanggal-wrapper .akad-nikah .inner .icon {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #bbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.mempelai-wrapper .akad-nikah-hari-tanggal-wrapper .akad-nikah .inner .icon img {
+    width: 75%;
+}
+
+.mempelai-wrapper .akad-nikah-hari-tanggal-wrapper .akad-nikah .inner .icon img.ring {
+    border-radius: 100%;
+}
+
+.mempelai-wrapper .akad-nikah-hari-tanggal-wrapper .akad-nikah .inner .icon img.date {
+    width: 58%;
+}
+
+.mempelai-wrapper .akad-nikah-hari-tanggal-wrapper .akad-nikah .inner h4.title-akad {
+    font-size: 18px;
+}
+
+.mempelai-wrapper .akad-nikah-hari-tanggal-wrapper .akad-nikah .inner .date-wrapper {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column
+}
+
+.mempelai-wrapper .akad-nikah-hari-tanggal-wrapper .akad-nikah .inner .date-wrapper .date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+.mempelai-wrapper .akad-nikah-hari-tanggal-wrapper .akad-nikah .inner .date-wrapper .date span {
+    margin-bottom: .3rem;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 991px) {
+    .mempelai-wrapper .akad-nikah-hari-tanggal-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    
+    .mempelai-wrapper .akad-nikah-hari-tanggal-wrapper .akad-nikah {
+        width: 100%;
+    }
+
+    .mempelai-wrapper .akad-nikah-hari-tanggal-wrapper .akad-nikah:first-child {
+        margin-bottom: 1.5rem;
+    }
+    
+    .mempelai-wrapper .akad-nikah-hari-tanggal-wrapper .akad-nikah .inner .icon {
+        width: 100px;
+        height: 100px;
+        margin-bottom: .8rem;
+    }
+    
+    .mempelai-wrapper .akad-nikah-hari-tanggal-wrapper .akad-nikah .inner h4.title-akad {
+        font-size: 16px;
+    }
+    
+    .mempelai-wrapper .akad-nikah-hari-tanggal-wrapper .akad-nikah .inner .date-wrapper {
+        margin-top: .8rem;
+    }
+    
+    .mempelai-wrapper .akad-nikah-hari-tanggal-wrapper .akad-nikah .inner .date-wrapper .date {
+        margin-bottom: .75rem;
+    }
+    
+    .mempelai-wrapper .akad-nikah-hari-tanggal-wrapper .akad-nikah .inner .date-wrapper .date span {
+        margin-bottom: .25rem;
+        font-size: 15px;
+    }
+}
+
+.kotakan-surat-al-quran {
+    background: #DB2777;
+    color: #fff;
+    padding: 3rem 5rem;
+    z-index: 999999;
+}
+
+.kotakan-surat-al-quran h2.title {
+    text-align: center;
+    font-size: 33px;
+}
+
+.kotakan-surat-al-quran p.text-arab {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 1.8rem;
+}
+
+.kotakan-surat-al-quran p.artinya {
+    text-align: center;
+    margin-top: 1.3rem;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 991px) {
+    .kotakan-surat-al-quran {
+        padding: 1.5rem 1rem;
+        z-index: 999999;
+    }
+    
+    .kotakan-surat-al-quran h2.title {
+        text-align: center;
+        font-size: 19px;
+    }
+    
+    .kotakan-surat-al-quran p.text-arab {
+        font-size: 23px;
+        margin-top: 1.4rem;
+        line-height: 40px;
+    }
+    
+    .kotakan-surat-al-quran p.artinya {
+        margin-top: 1rem;
+        font-size: 15px;
+        line-height: 24px;
+    }
+}
+
+.gallery-wrapper {
+    padding: 0 5rem;
+}
+
+.gallery-wrapper .gallery {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.gallery-wrapper .gallery .image {
+    width: 23%;
+    margin-bottom: 2rem;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.gallery-wrapper .gallery .image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+.gallery-wrapper .gallery .image img:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 991px) {
+    .gallery-wrapper {
+        padding: 0 1rem;
+    }
+    
+    .gallery-wrapper .gallery {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2.2rem;
+    }
+    
+    .gallery-wrapper .gallery .image {
+        width: 90%;
+        margin-bottom: 1.25rem;
+        height: 250px;
+        border-radius: 10px;
+    }
+    
+    .gallery-wrapper .gallery .image img {
+        width: 100%;
+        height: 250px;
+        border-radius: 10px;
+    }
+}
+
+.location-wrapper {
+    padding: 0 5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+}
+
+.location-wrapper .location {
+    width: 47%;
+}
+
+.location-wrapper .location .title {
+    text-align: center;
+    font-size: 25px;
+    color: #333;
+}
+
+.location-wrapper .location p {
+    text-align: center;
+    color: #666;
+    margin-top: 11px;
+    display: flex;
+    flex-direction: column
+}
+
+.location-wrapper .location p span {
+    margin-bottom: .3rem;
+}
+
+.location-wrapper .location iframe {
+    width: 100%;
+    height: 350px;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 991px) {
+    .location-wrapper {
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    
+    .location-wrapper .location {
+        width: 100%;
+    }
+
+    .location-wrapper .location:first-child {
+        margin-bottom: 2.5rem;
+    }
+    
+    .location-wrapper .location .title {
+        font-size: 19px;
+    }
+    
+    .location-wrapper .location p {
+        margin-top: 9px;
+    }
+    
+    .location-wrapper .location p span {
+        margin-bottom: .5rem;
+        font-size: 15px;
+    }
+    
+    .location-wrapper .location iframe {
+        width: 100%;
+        height: 320px;
+        margin-top: .75rem;
+    }
+}
+
+.contact-us-wrapper {
+    padding: 0 5rem;
+    margin-top: 2rem;
+}
+
+.contact-us-wrapper .number-phone-email-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-us-wrapper .number-phone-email-wrapper .contact {
+    font-size: 20px;
+    width: 47%;
+    color: #444;
+    font-weight: 600;
+}
+
+.contact-us-wrapper .number-phone-email-wrapper .contact:first-child {
+    text-align: right;
+}
+
+.contact-us-wrapper .number-phone-email-wrapper .contact:last-child {
+    text-align: left;
+}
+
+.contact-us-wrapper .number-phone-email-wrapper .contact i {
+    margin-right: 7px;
+}
+
+.contact-us-wrapper .number-phone-email-wrapper .contact a {
+    text-decoration: none;
+    color: #B5001A;
+}
+
+.contact-us-wrapper .number-phone-email-wrapper .contact a:hover {
+    text-decoration: underline;
+}
+
+.contact-us-wrapper .social-media-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+.contact-us-wrapper .social-media-wrapper .socmed a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-us-wrapper .social-media-wrapper .socmed a:hover {
+    text-decoration: underline;
+}
+
+.contact-us-wrapper .social-media-wrapper .socmed a i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.contact-us-wrapper .social-media-wrapper .socmed a.facebook {
+    color: #3B5998;
+}
+
+.contact-us-wrapper .social-media-wrapper .socmed a.whatsapp {
+    color: #24CC63;
+}
+
+.contact-us-wrapper .social-media-wrapper .socmed a.instagram {
+    color: #CF2872;
+}
+
+.contact-us-wrapper .social-media-wrapper .socmed a.twitter {
+    color: #52A8E7;
+}
+
+@media screen and (max-width: 991px) {
+    .contact-us-wrapper {
+        padding: 0 1rem;
+        margin-top: 2rem;
+    }
+    
+    .contact-us-wrapper .number-phone-email-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .contact-us-wrapper .number-phone-email-wrapper .contact {
+        font-size: 17px;
+        width: 100%;
+    }
+    
+    .contact-us-wrapper .number-phone-email-wrapper .contact:first-child {
+        text-align: center;
+    }
+
+    .contact-us-wrapper .number-phone-email-wrapper .contact:last-child {
+        text-align: center;
+    }
+    
+    .contact-us-wrapper .number-phone-email-wrapper .contact i {
+        margin-right: 6px;
+    }
+    
+    .contact-us-wrapper .social-media-wrapper {
+        flex-direction: column;
+        margin-top: 1.5rem;
+    }
+
+    .contact-us-wrapper .social-media-wrapper .socmed {
+        margin-bottom: .75rem;
+    }
+    
+    .contact-us-wrapper .social-media-wrapper .socmed a i {
+        font-size: 29px;
+        margin-right: 9px;
+    }
+}
+
+footer {
+    background-color: #DB2777;
+    margin-top: 5rem;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer span a {
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer span a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 991px) {
+    footer {
+        margin-top: 2rem;
+        padding: .7rem 0;
+        font-size: 14px;
+    }
+}
