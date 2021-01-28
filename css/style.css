@@ -143,7 +143,8 @@ nav .nav-links li a:hover {
 .hero-wrapper {
     display: flex;
     height: 90vh;
-    background-color: #FF7C9F;
+    background: rgb(255,205,94);
+    background: linear-gradient(180deg, rgba(255,205,94,1) 1%, rgba(255,138,94,1) 49%, rgba(255,255,255,1) 100%);
     margin-top: 10vh;
 }
 
@@ -156,7 +157,11 @@ nav .nav-links li a:hover {
 
 .hero-wrapper .teks-nikah .inner {
     padding-left: 3rem;
-    color: #fff;
+    color: #333 !important;
+}
+
+.hero-wrapper .teks-nikah .inner i {
+    color: #DB2777;
 }
 
 .hero-wrapper .teks-nikah .inner h2 {
@@ -176,7 +181,8 @@ nav .nav-links li a:hover {
 }
 
 .hero-wrapper .vector-nikah-wrapper img {
-    width: 90%;
+    width: 65%;
+    border-radius: 15px;
 }
 
 .hero-wrapper .teks-nikah .inner .jam-mundur-wrapper {
@@ -201,7 +207,10 @@ nav .nav-links li a:hover {
     }
     
     .hero-wrapper .vector-nikah-wrapper img {
-        width: 75%;
+        width: 60%;
+        margin-top: 1rem;
+        margin-bottom: 1.3rem;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     }
     
     .hero-wrapper .teks-nikah .inner {
