@@ -536,8 +536,9 @@ p.text-after-headline {
 }
 
 .kotakan-surat-al-quran {
-    background: #DB2777;
-    color: #fff;
+    background: rgb(255,205,94);
+    background: linear-gradient(180deg, rgba(255,205,94,1) 1%, rgba(255,138,94,1) 49%, rgba(255,255,255,1) 100%);
+    color: #333;
     padding: 3rem 5rem;
     z-index: 999999;
 }
