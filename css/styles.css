@@ -840,7 +840,7 @@ p.text-after-headline {
 }
 
 footer {
-    background-color: #DB2777;
+    background-color: #f8703a !important;
     margin-top: 5rem;
     color: #fff;
     padding: 1rem 0;
