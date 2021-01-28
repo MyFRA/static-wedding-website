@@ -101,6 +101,7 @@ nav .nav-links li a:hover {
         top: 0;
         padding: 1rem 0;
         height: 40vh;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 
         margin-top: -40vh;
     }
@@ -431,7 +432,7 @@ p.text-after-headline {
 }
 
 .mempelai-wrapper .akad-nikah-hari-tanggal-wrapper .akad-nikah {
-    width: 48%;
+    width: 100%;
 }
 
 .mempelai-wrapper .akad-nikah-hari-tanggal-wrapper .akad-nikah .inner {
@@ -666,6 +667,7 @@ p.text-after-headline {
     height: 350px;
     margin-top: 1rem;
     border-radius: 8px;
+    border: 2px solid #eee;
 }
 
 @media screen and (max-width: 991px) {
@@ -811,6 +813,10 @@ p.text-after-headline {
     .contact-us-wrapper .social-media-wrapper {
         flex-direction: column;
         margin-top: 1.5rem;
+    }
+
+    .contact-us-wrapper .social-media-wrapper:last-child {
+        margin-top: 0;
     }
 
     .contact-us-wrapper .social-media-wrapper .socmed {
